@@ -2,7 +2,7 @@ import re, os, requests, tempfile, shutil
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8654527955:AAEhF9b6eZxa8YeVEghNgBkkNeV4vuzf5FU")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 def download_with_ytdlp(url):
     import yt_dlp
